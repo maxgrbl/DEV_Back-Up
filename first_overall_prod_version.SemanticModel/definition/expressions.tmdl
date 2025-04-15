@@ -1,0 +1,60 @@
+expression fact_workingminutes_inbound_sharepoint =
+		let
+		    Source = SharePoint.Files("https://bosch.sharepoint.com/sites/msteams_172d65-WE_Kennzahlen", [ApiVersion = 15]),
+		    #"WE-Gesamt_Kennzahlen xlsx_https://bosch sharepoint com/sites/msteams_172d65-WE_Kennzahlen/Shared Documents/WE_Kennzahlen/" = Source{[Name="WE-Gesamt_Kennzahlen.xlsx",#"Folder Path"="https://bosch.sharepoint.com/sites/msteams_172d65-WE_Kennzahlen/Shared Documents/WE_Kennzahlen/"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"WE-Gesamt_Kennzahlen xlsx_https://bosch sharepoint com/sites/msteams_172d65-WE_Kennzahlen/Shared Documents/WE_Kennzahlen/"),
+		    Kennzahlen_Sheet = #"Imported Excel Workbook"{[Item="Kennzahlen",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(Kennzahlen_Sheet,1),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Column1", type date}, {"LE / AT", type any}, {"Pos. / AT", type text}, {"AKL", Int64.Type}, {"HRL", Int64.Type}, {"Summe", Int64.Type}, {"HRL in h", type number}, {"HRL/h", type number}, {"Störung", type datetime}, {"Q- Fehler#(lf)AKL", type number}, {"Q- Wert", type number}, {"Einlagerende", type any}, {"DLZ#(lf)24h", type number}, {"offene ASN", type number}, {"ältestes Datum", type any}, {"", type any}, {"Sonstiges", type text}, {"Mah", type number}, {"Prod", type number}, {"Tages Ret.", Int64.Type}, {"LB", Int64.Type}, {"Datum älteste LB", type date}, {"A-Ware", Int64.Type}, {"B-Ware", Int64.Type}, {"Summe_1", Int64.Type}, {"nach WE", type number}, {"DIS", type text}, {"APP", type number}, {"TL Aufwand Q-Werkstatt", Int64.Type}, {"Abzug Sonstiges", type number}, {"Mah_2", type number}, {"Prod_3", type any}, {"generierte Prüflos", Int64.Type}, {"Bearb. SP", Int64.Type}, {"Erstellte#(lf)QM", Int64.Type}, {"Offene PL > 5 AT", Int64.Type}, {"LISA#(lf)Q Pr.", Int64.Type}, {"LISA#(lf)Fehler", Int64.Type}, {"Q-Sperrbestand BLO", type any}, {"Ältestes Datum", type any}, {"Y2", Int64.Type}, {"YI", Int64.Type}, {"YR", Int64.Type}, {"Offene DOCK Bestände", type text}, {"LA-Fehler", Int64.Type}, {"LA-Fehler %", type number}, {"Q-Maßn. Älter 2 Tage", type text}, {"GW Angeliefert", Int64.Type}, {"Datum älteste GW", type any}, {"DLZ GW", Int64.Type}, {"Datum älteste EB", type date}, {"DLZ EB", Int64.Type}, {"ein zulastende Aufträge", Int64.Type}, {"Erl. Aufträge", Int64.Type}, {"Tagesleistung", Int64.Type}, {"offen >2 AT", Int64.Type}, {"Bear Beh.", type any}, {"Bear LAE", Int64.Type}, {"Packmin.", Int64.Type}, {"Nebentätig-keit", Int64.Type}, {"Summe_4", type any}, {"nach WE_5", type text}, {"Sonst", type text}, {"Prod_6", type any}, {"WE1", type number}, {"WE2", type number}, {"WE3", type number}, {"WE4", type number}, {"WE5", type number}, {"WE6", Int64.Type}, {"WE7", Int64.Type}, {"WE8", type number}, {"MA Bonus", type number}, {"Ist", type number}, {"Soll", type number}, {"Kennzahl", type number}, {"Summe_7", type text}, {"Zusatz-aufwand", type text}, {"Sonder-aktion", type text}, {"Schulung", type text}, {"Summe_8", type number}, {"Techn.#(lf)Pannen", Int64.Type}, {"DV-Pannen#(lf)SAP, #(lf)WMS (LISA)", Int64.Type}, {"Veränderte Rahmen-bedingungen", type text}, {"Pause#(lf)Nacht-#(lf)schicht", type number}, {"Stillstand#(lf)geplant", Int64.Type}, {"Schulung_9", type number}, {"BER#(lf)Tätigkeit", type number}, {"Werks-feuer-wehr", type text}, {"Hitze-pause", Int64.Type}, {"Work-shops", type any}, {"MA#(lf)krank#(lf)nach Hause", type any}, {"Sonst_10", type number}, {"nach#(lf)VZ", type number}, {"nach#(lf)AKL", type any}, {"nach#(lf)WE", type number}, {"nach #(lf)ZWB", type number}, {"nach#(lf)Q-Werkstatt", Int64.Type}, {"nach Operating", type text}, {"Gesamt", type number}, {"AU-Tage", Int64.Type}, {"AU-Tage#(lf)LZK", Int64.Type}, {"Anzahl#(lf)T-Karten#(lf)neu", Int64.Type}, {"Anzahl#(lf)T-Karten#(lf)erledigt", Int64.Type}, {"AU-Tage %", type number}, {"AU-Tage %#(lf)Rest", type number}, {"AU-Tage %#(lf)LZK", type number}, {"Column108", type any}, {"Column109", type any}, {"Column110", type any}, {"Column111", type any}, {"Column112", type any}, {"Column113", type any}, {"Column114", type any}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Ältestes Datum", "Ältestes Datum.1"}, {"Column1", "Datum"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"Datum", "Gesamt"}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Removed Other Columns",{{"Gesamt", "MA_Stunden"}}),
+		    #"Replaced Errors" = Table.ReplaceErrorValues(#"Renamed Columns1", {{"MA_Stunden", 244}}),
+		    #"Added Custom" = Table.AddColumn(#"Replaced Errors", "Wertstrom", each "Wareneingang")
+		in
+		    #"Added Custom"
+	lineageTag: 7daf7425-5a8d-47ca-a67e-7ded6d64c6e8
+	queryGroup: 'working minutes'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression fact_workingminutes_shyftplan =
+		let
+		    Source = Sql.Database("si0vsql230", "AALOW_Internal", [Query="WITH worker_fact AS (#(lf) #(lf)#(tab)#(tab)SELECT DATEADD(HOUR, DATEPART(HOUR,GETDATE()) -1, CONVERT(datetime,[DatumSchicht])) AS ""Start_Hour"", #(lf)#(tab)#(tab)[DatumSchicht],#(lf)#(tab)#(tab)[Shift_Start], #(lf)#(tab)#(tab)[Work_End],#(lf)#(tab)#(tab)CASE WHEN DATEADD(HOUR,DATEPART(HOUR,GETDATE()) -1, CONVERT(datetime,[DatumSchicht])) BETWEEN DATEADD(HOUR, DATEDIFF(HOUR, '20000101', [Shift_Start]),'20000101') AND DATEADD(HOUR, DATEDIFF(HOUR, '20000101', [Work_End]) -1,'20000101') THEN 1 ELSE 0 END AS ""works"",#(lf)#(tab)#(tab)TEAM#(lf) #(lf)#(tab)#(tab)#(tab)FROM [AALOW_Shyftplan].[SHYFTPLAN_PBI].[EVALUATIONS]#(lf)#(tab)#(tab)#(tab)WHERE YEAR([DatumSchicht]) >= 2022#(lf)#(tab)#(tab)#(tab)#(lf)#(tab)#(tab)#(tab))#(lf)#(lf)SELECT [DatumSchicht] AS ""Datum"",  SUM(works) AS ""MA_Stunden""#(lf)FROM worker_fact#(lf)GROUP BY [DatumSchicht]#(lf)", CommandTimeout=#duration(0, 1, 0, 0)]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Datum", type date}}),
+		    #"Added Custom" = Table.AddColumn(#"Changed Type", "Wertstrom", each "Warenausgang")
+		in
+		    #"Added Custom"
+	lineageTag: d096cabb-9048-4fa1-b800-51eb4d184501
+	queryGroup: 'working minutes'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression fact_workingminutes_dispatch =
+		let
+		    Quelle = SharePoint.Files("https://bosch.sharepoint.com/sites/msteams_59f1ef81-Versand_Kennzahlen", [ApiVersion = 15]),
+		    #"VS-Gesamt_Kennzahlen xlsx_https://bosch sharepoint com/sites/msteams_59f1ef81-Versand_Kennzahlen/Shared Documents/Versand_Kennzahlen/" = Quelle{[Name="VS-Gesamt_Kennzahlen.xlsx",#"Folder Path"="https://bosch.sharepoint.com/sites/msteams_59f1ef81-Versand_Kennzahlen/Shared Documents/Versand_Kennzahlen/"]}[Content],
+		    #"Importierte Excel-Arbeitsmappe" = Excel.Workbook(#"VS-Gesamt_Kennzahlen xlsx_https://bosch sharepoint com/sites/msteams_59f1ef81-Versand_Kennzahlen/Shared Documents/Versand_Kennzahlen/"),
+		    Kennzahlen_Sheet = #"Importierte Excel-Arbeitsmappe"{[Item="Kennzahlen",Kind="Sheet"]}[Data],
+		    #"Andere entfernte Spalten" = Table.SelectColumns(Kennzahlen_Sheet,{"Column1", "Column61", "Column62", "Column63"}),
+		    #"Umbenannte Spalten" = Table.RenameColumns(#"Andere entfernte Spalten",{{"Column61", "VS1-GPS u. KPS"}, {"Column62", "VS2-Leasing"}, {"Column63", "VS8-Sachbearbeiter"}}),
+		    #"Entfernte oberste Zeilen" = Table.Skip(#"Umbenannte Spalten",2),
+		    #"Geänderter Typ" = Table.TransformColumnTypes(#"Entfernte oberste Zeilen",{{"VS1-GPS u. KPS", type number}, {"VS2-Leasing", type number}, {"VS8-Sachbearbeiter", type number}}),
+		    #"Summe eingefügt" = Table.AddColumn(#"Geänderter Typ", "Addition", each List.Sum({[#"VS1-GPS u. KPS"], [#"VS2-Leasing"], [#"VS8-Sachbearbeiter"]}), type number),
+		    #"Umbenannte Spalten1" = Table.RenameColumns(#"Summe eingefügt",{{"Addition", "MA_Stunden"}, {"Column1", "Datum"}}),
+		    #"Entfernte Spalten" = Table.RemoveColumns(#"Umbenannte Spalten1",{"VS1-GPS u. KPS", "VS2-Leasing", "VS8-Sachbearbeiter"}),
+		    #"Added Custom" = Table.AddColumn(#"Entfernte Spalten", "Wertstrom", each "Versand")
+		in
+		    #"Added Custom"
+	lineageTag: f96cb373-d105-4841-9949-83fe95e51a31
+	queryGroup: 'working minutes'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

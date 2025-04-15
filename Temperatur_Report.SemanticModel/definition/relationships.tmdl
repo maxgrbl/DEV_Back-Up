@@ -1,0 +1,10 @@
+relationship 4a6b0bd3-448f-4fea-950f-3cac9d8d58db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.Date
+	toColumn: LocalDateTable_12e11d56-0352-442a-bb2e-b6a6c277a471.Date
+
+relationship 46866e98-395d-4d5d-983f-a65cebf0331f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_temperatur_sql.zeitstempel
+	toColumn: LocalDateTable_1eac5c30-8c6e-4619-805a-4d7a93f6f21d.Date
+

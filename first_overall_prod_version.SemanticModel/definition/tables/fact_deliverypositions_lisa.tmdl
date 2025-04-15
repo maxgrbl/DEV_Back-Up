@@ -1,0 +1,31 @@
+table fact_deliverypositions_lisa
+	lineageTag: 7fde9735-330c-4509-a9a5-ff1447a41a5c
+
+	column Datum
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1610227c-dc5c-4ce3-9578-512ffb3d1e17
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Anzahl Positionen'
+		dataType: int64
+		formatString: 0
+		lineageTag: a97397d8-180c-4a42-af4c-8b18d04e30fb
+		summarizeBy: sum
+		sourceColumn: Anzahl Positionen
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_deliverypositions_lisa = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("si0vsql230", "AALOW_Internal", [Query="WITH CTE_events AS (#(lf)SELECT CONCAT([LIEFERUNGID], [LIEFERUNGPOSID]) AS Pos_ID#(lf)      ,CONVERT(DATE, [ARCHIVIERT]) AS Datum#(lf)  FROM [AALOW_Internal].[LISA].[V_ACC_LIFPOA]#(lf)  WHERE [STORNO] IS NULL#(lf)  )#(lf)#(lf)SELECT Datum, Count(Pos_ID) AS [Anzahl Positionen]#(lf)FROM CTE_events#(lf)GROUP BY Datum", CommandTimeout=#duration(0, 1, 0, 0)])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

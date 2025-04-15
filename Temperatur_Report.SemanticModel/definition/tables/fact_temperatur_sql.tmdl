@@ -1,0 +1,118 @@
+table fact_temperatur_sql
+	lineageTag: 278fc434-44fa-4612-8593-3816cdc8c817
+
+	measure Grenze = 27.5
+		lineageTag: 03780e19-07c7-46dd-bf28-960e1120fe54
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column zeitstempel
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e1273a55-893b-463d-b41e-29a8fa354663
+		summarizeBy: none
+		sourceColumn: zeitstempel
+
+		variation Variation
+			isDefault
+			relationship: 46866e98-395d-4d5d-983f-a65cebf0331f
+			defaultHierarchy: LocalDateTable_1eac5c30-8c6e-4619-805a-4d7a93f6f21d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column halle_k106
+		dataType: double
+		lineageTag: 90cf4f5b-d59a-41c8-aeef-fea30f1ad967
+		summarizeBy: sum
+		sourceColumn: halle_k106
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column akl_vorzone
+		dataType: double
+		lineageTag: ecc1ea90-9cc3-4025-afc8-83915fd44c79
+		summarizeBy: sum
+		sourceColumn: akl_vorzone
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column hrl2
+		dataType: double
+		lineageTag: b9678635-9bbc-41a6-ad8b-bb9060fa6d49
+		summarizeBy: sum
+		sourceColumn: hrl2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aussen_ka107
+		dataType: double
+		lineageTag: 2f821474-9636-43e2-a6a5-cff27a2ece24
+		summarizeBy: sum
+		sourceColumn: aussen_ka107
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column zwischenbuehne
+		dataType: double
+		lineageTag: 5b8f06e8-31d4-4fd7-9c5a-9f93cc245f4c
+		summarizeBy: sum
+		sourceColumn: zwischenbuehne
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column halle_ka102
+		dataType: double
+		lineageTag: f64c034b-426e-492a-8dca-41e520ea3723
+		summarizeBy: sum
+		sourceColumn: halle_ka102
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column aussen_ka110
+		dataType: double
+		lineageTag: b4c38b40-3000-4e1e-82fd-d390bf5bf218
+		summarizeBy: sum
+		sourceColumn: aussen_ka110
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: d137c2b3-65d6-4620-b2d5-7e9642172b2b
+		summarizeBy: none
+		sourceColumn: Time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition fact_temperatur_sql-3e983040-7903-4928-b1a6-662da4242dac = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("si0vsql230", "AALOW_Internal", [Query="SELECT *#(lf)FROM [AALOW_Internal_DEV].[LOWKA].[temperatur_wh]", CommandTimeout=#duration(0, 1, 0, 0)]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"zeitstempel", type datetime}, {"halle_k106", type number}, {"akl_vorzone", type number}, {"hrl2", type number}, {"aussen_ka107", type number}, {"zwischenbuehne", type number}, {"halle_ka102", type number}, {"aussen_ka110", type number}}),
+				    #"Inserted Time" = Table.AddColumn(#"Changed Type", "Time", each DateTime.Time([zeitstempel]), type time),
+				    #"Removed Duplicates" = Table.Distinct(#"Inserted Time")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,37 @@
+table Date
+	lineageTag: 84a5ec6f-e804-49ca-bf5c-3a4694e4af19
+
+	column Date
+		formatString: General Date
+		lineageTag: 175123f7-cb4f-4b34-8b53-900f3e21d98c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 4a6b0bd3-448f-4fea-950f-3cac9d8d58db
+			defaultHierarchy: LocalDateTable_12e11d56-0352-442a-bb2e-b6a6c277a471.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wochentag = WEEKDAY([Date], 2)
+		formatString: 0
+		lineageTag: ea066ce1-111a-434c-9c49-89c19cf6db82
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kalenderwoche = WEEKNUM('Date'[Date], 21)
+		formatString: 0
+		lineageTag: c30b6bf0-046a-400c-8b52-e10f81b8eefd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date-f6221441-cebe-40e4-adf3-60d38d0b7718 = calculated
+		mode: import
+		source = CALENDARAUTO()
+
+	annotation PBI_Id = ec444167504a49f9bcf521f518f11b26
+

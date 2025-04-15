@@ -1,0 +1,47 @@
+table fact_workingminuntes_all
+	lineageTag: bde8958b-fa88-4223-9a23-df9f38f2f224
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 59d4f01f-86ca-4ca8-80c2-f00c55f35418
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MA_Stunden
+		dataType: double
+		lineageTag: 6489cef8-83f8-47dd-ab86-c081587c83a1
+		summarizeBy: sum
+		sourceColumn: MA_Stunden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Wertstrom
+		dataType: string
+		lineageTag: d515a49a-099f-4bc3-ab53-28459535b1cb
+		summarizeBy: none
+		sourceColumn: Wertstrom
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_workingminuntes_all = m
+		mode: import
+		queryGroup: 'working minutes'
+		source =
+				let
+				    Source = Table.Combine({fact_workingminutes_shyftplan, fact_workingminutes_inbound_sharepoint,fact_workingminutes_dispatch}),
+				    #"Grouped Rows" = Table.Group(Source, {"Datum", "Wertstrom"}, {{"MA_Stunden", each List.Sum([MA_Stunden]), type nullable number}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Grouped Rows", {{"MA_Stunden", 0}})
+				in
+				    #"Replaced Errors"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

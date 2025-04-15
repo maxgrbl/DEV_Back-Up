@@ -1,0 +1,45 @@
+expression 'Chart1_data (2)' =
+		let
+		    Source = Excel.Workbook(File.Contents("\\bosch.com\dfsrb\DfsDE\DIV\AA\LO\_LO_restricted\LOW-Ka_restricted\05_Personal\06_Praktikanten_Diplomanden_Werkstudenten\Greblea\Reports\Ka106_Temp_15min Raster.xlsx"), null, true),
+		    Chart1_data_Sheet = Source{[Item="Chart1_data",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Chart1_data_Sheet, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Zeit", type any}, {"[◄] K106LL04.TR71 (Original) [°C]", type number}, {"Status", type text}, {"Zeit_1", type any}, {"[◄] K106LL04.TR75 (Original) [°C]", type number}, {"Status_2", type text}, {"Zeit_3", type any}, {"[◄] K107LS01.TR01 (Original) [°C]", type number}, {"Status_4", type text}}),
+		    #"Added Custom" = Table.AddColumn(#"Changed Type", "Custom", each [Zeit]),
+		    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom",{"Zeit", "Custom", "[◄] K106LL04.TR71 (Original) [°C]", "Status", "Zeit_1", "[◄] K106LL04.TR75 (Original) [°C]", "Status_2", "Zeit_3", "[◄] K107LS01.TR01 (Original) [°C]", "Status_4"}),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Reordered Columns",{{"Zeit", type datetime}, {"Custom", type datetime}}),
+		    #"Inserted Time" = Table.AddColumn(#"Changed Type1", "Time", each DateTime.Time([Custom]), type time),
+		    #"Removed Top Rows" = Table.Skip(#"Inserted Time",1),
+		    #"Reordered Columns1" = Table.ReorderColumns(#"Removed Top Rows",{"Zeit", "Time", "Custom", "[◄] K106LL04.TR71 (Original) [°C]", "Status", "Zeit_1", "[◄] K106LL04.TR75 (Original) [°C]", "Status_2", "Zeit_3", "[◄] K107LS01.TR01 (Original) [°C]", "Status_4"}),
+		    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns1",{"Custom"}),
+		    #"Changed Type2" = Table.TransformColumnTypes(#"Removed Columns",{{"Zeit_1", type datetime}}),
+		    #"Inserted Time1" = Table.AddColumn(#"Changed Type2", "Time.1", each DateTime.Time([Zeit_1]), type time),
+		    #"Reordered Columns2" = Table.ReorderColumns(#"Inserted Time1",{"Zeit", "Time", "[◄] K106LL04.TR71 (Original) [°C]", "Status", "Zeit_1", "Time.1", "[◄] K106LL04.TR75 (Original) [°C]", "Status_2", "Zeit_3", "[◄] K107LS01.TR01 (Original) [°C]", "Status_4"}),
+		    #"Changed Type3" = Table.TransformColumnTypes(#"Reordered Columns2",{{"Zeit_3", type datetime}}),
+		    #"Inserted Time2" = Table.AddColumn(#"Changed Type3", "Time.2", each DateTime.Time([Zeit_3]), type time),
+		    #"Reordered Columns3" = Table.ReorderColumns(#"Inserted Time2",{"Zeit", "Time", "[◄] K106LL04.TR71 (Original) [°C]", "Status", "Zeit_1", "Time.1", "[◄] K106LL04.TR75 (Original) [°C]", "Status_2", "Zeit_3", "Time.2", "[◄] K107LS01.TR01 (Original) [°C]", "Status_4"})
+		in
+		    #"Reordered Columns3"
+	lineageTag: d5ee060e-fd26-4990-8953-a819bc19de8a
+
+	annotation PBI_NavigationStepName = Navigation
+
+expression TEMPERATUR_DATEN =
+		let
+		    Source = Csv.Document(File.Contents("\\SI0VMC2204\LsRoot\TempDatenExport\TEMPERATUR_DATEN.CSV"),[Delimiter=";", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}}),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"", type text}, {"Ø-Temp. Halle Ka106", type text}, {"Temp. Vorzone/AKL", type text}, {"Temp. HRL 2", type text}, {"Aussen-Temp. K107", type text}, {"Zwischenbuehne Temp.", type text}, {"Ø-Temp. Halle Ka102", type text}, {"Aussen-Temp. Ka110  ", type text}}),
+		    #"Removed Top Rows" = Table.Skip(#"Changed Type1",1),
+		    #"Changed Type2" = Table.TransformColumnTypes(#"Removed Top Rows",{{"", type datetime}, {"Ø-Temp. Halle Ka106", type number}, {"Temp. Vorzone/AKL", type number}, {"Temp. HRL 2", type number}, {"Aussen-Temp. K107", type number}, {"Zwischenbuehne Temp.", type number}, {"Ø-Temp. Halle Ka102", type number}, {"Aussen-Temp. Ka110  ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type2",{{"", "Datum"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Uhrzeit", each [Datum]),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Added Custom",{{"Uhrzeit", "Uhrzeit_2"}}),
+		    #"Changed Type3" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Uhrzeit_2", type time}})
+		in
+		    #"Changed Type3"
+	lineageTag: ac7a5195-3ba7-42e3-b890-d3e2894f0e5b
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

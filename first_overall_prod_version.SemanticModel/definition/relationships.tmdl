@@ -1,0 +1,15 @@
+relationship aeec6094-e2b3-47ff-8a74-584a4d165927
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dimCalendar.Date
+	toColumn: LocalDateTable_b0056958-5341-4a32-a314-b41782c67000.Date
+
+relationship 8d92dcff-f2ca-4aad-8b3b-8a5094b8cbe1
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: fact_deliverypositions_lisa.Datum
+	toColumn: dimCalendar.Date
+
+relationship d40b91a3-1ee7-4a87-8a09-c26bbee553d1
+	fromColumn: fact_workingminuntes_all.Datum
+	toColumn: dimCalendar.Date
+

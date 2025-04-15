@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: de-DE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Chart1_data (2)","TEMPERATUR_DATEN","fact_temperatur_sql"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.115.842.0
+
+ref table DateTableTemplate_fff2ee25-ac0b-4ef0-8598-c0f76d222429
+ref table Date
+ref table LocalDateTable_12e11d56-0352-442a-bb2e-b6a6c277a471
+ref table fact_temperatur_sql
+ref table LocalDateTable_1eac5c30-8c6e-4619-805a-4d7a93f6f21d
+
+ref cultureInfo en-US
+
