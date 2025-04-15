@@ -104,27 +104,6 @@
         }
       ],
       "width": 1280.00
-    },
-    {
-      "config": "{}",
-      "displayName": "Page 2",
-      "displayOption": 1,
-      "filters": "[]",
-      "height": 720.00,
-      "name": "f5c885b3ad267fe4d6c7",
-      "ordinal": 1,
-      "visualContainers": [
-        {
-          "config": "{\"name\":\"9034143784f8332cc292\",\"layouts\":[{\"id\":0,\"position\":{\"x\":461.58415841584156,\"y\":135.44554455445544,\"z\":0,\"width\":463.36633663366337,\"height\":399.2079207920792,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dimCalendar.Date.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"dimCalendar.Date.Variation.Date Hierarchy.Quarter\"},{\"queryRef\":\"dimCalendar.Date.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"dimCalendar.Date.Variation.Date Hierarchy.Day\"}],\"Y\":[{\"queryRef\":\"dimCalendar.Productivity\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dimCalendar\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"dimCalendar.Date.Variation.Date Hierarchy.Year\",\"NativeReferenceName\":\"Date Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"dimCalendar.Date.Variation.Date Hierarchy.Quarter\",\"NativeReferenceName\":\"Date Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"dimCalendar.Date.Variation.Date Hierarchy.Month\",\"NativeReferenceName\":\"Date Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"Date\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"dimCalendar.Date.Variation.Date Hierarchy.Day\",\"NativeReferenceName\":\"Date Day\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Productivity\"},\"Name\":\"dimCalendar.Productivity\",\"NativeReferenceName\":\"Productivity\"}]},\"drillFilterOtherVisuals\":true}}",
-          "filters": "[]",
-          "height": 399.21,
-          "width": 463.37,
-          "x": 461.58,
-          "y": 135.45,
-          "z": 0.00
-        }
-      ],
-      "width": 1280.00
     }
   ]
 }
