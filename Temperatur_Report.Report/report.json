@@ -1,0 +1,381 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU03\",\"version\":\"5.33\",\"type\":2},\"customTheme\":{\"name\":\"Bosch_Data_Visualization6664962143079669.json\",\"version\":\"5.33\",\"type\":1}},\"activeSectionIndex\":2,\"bookmarks\":[{\"displayName\":\"Anzahl\",\"name\":\"Bookmarkb653f05072202be5a9ee\",\"explorationState\":{\"version\":\"1.3\",\"activeSection\":\"ReportSection8b5dab8643be231c04cb\",\"sections\":{\"ReportSection8b5dab8643be231c04cb\":{\"visualContainers\":{\"20dec2419b229005ed13\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka102\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka106\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Zwischenbuehne Temp.\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Aussen-Temp. K107\"}},\"Function\":0}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"tableEx\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}}]}},\"81565210aa817a0d781c\":{\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{}}},\"acecd116de2e1a109884\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Temperatur-Grenze\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka102\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka106\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Zwischenbuehne Temp.\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Aussen-Temp. K107\"}},\"Function\":0}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"objects\":{},\"orderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}}],\"activeProjections\":{\"Category\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}]}}},\"03dbfdf5ae88750980c9\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"slicer\",\"objects\":{\"merge\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2023-06-05T00:00:00'\"}}}}}]}}}}],\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2023-06-05T18:00:00.290'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}]}},\"orderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}}],\"activeProjections\":{\"Values\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}]}}},\"dd84132570887d17ad08\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Schicht\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"slicer\",\"objects\":{\"merge\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}},\"activeProjections\":{\"Values\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Schicht\"}}]}}},\"562640da1ec0182d8e40\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"howCreated\":1},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° ZW\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° ZW\"}}}]}},\"058cdf80b0b9839cb0d8\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° Außen\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° Außen\"}}}]}},\"2c91d88cc0605466b7ea\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WA\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WA\"}}}]}},\"1466aa6aae1b4605094b\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WE\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WE\"}}}]}},\"011240d3c82eee6b4ad4\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Außentemp. Quote\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Außentemp. Quote\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"312e27209cd4d2a2e14d\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"howCreated\":1},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote ZW\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote ZW\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"a0446e959d8a8ac36b6d\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WE\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WE\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"fffc09e654237e938870\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WA\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WA\"}}}],\"display\":{\"mode\":\"hidden\"}}}}}},\"objects\":{\"merge\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}},\"options\":{\"targetVisualNames\":[]}},{\"displayName\":\"Quote\",\"name\":\"Bookmarke55f1e783cd303a46b80\",\"explorationState\":{\"version\":\"1.3\",\"activeSection\":\"ReportSection8b5dab8643be231c04cb\",\"sections\":{\"ReportSection8b5dab8643be231c04cb\":{\"visualContainers\":{\"20dec2419b229005ed13\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka102\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka106\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Zwischenbuehne Temp.\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Aussen-Temp. K107\"}},\"Function\":0}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"tableEx\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}}]}},\"81565210aa817a0d781c\":{\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{}}},\"acecd116de2e1a109884\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Temperatur-Grenze\"}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka102\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Ø-Temp. Halle Ka106\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Zwischenbuehne Temp.\"}},\"Function\":0}},\"howCreated\":0},{\"type\":\"Advanced\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Aussen-Temp. K107\"}},\"Function\":0}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"objects\":{},\"orderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}}],\"activeProjections\":{\"Category\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}]}}},\"03dbfdf5ae88750980c9\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"slicer\",\"objects\":{\"merge\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2023-06-05T00:00:00'\"}}}}}]}}}}],\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2023-06-05T18:00:00.290'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}]}},\"orderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}}],\"activeProjections\":{\"Values\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Datum\"}}]}}},\"dd84132570887d17ad08\":{\"filters\":{\"byExpr\":[{\"type\":\"Categorical\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Schicht\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"slicer\",\"objects\":{\"merge\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}]}},\"activeProjections\":{\"Values\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Schicht\"}}]}}},\"562640da1ec0182d8e40\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"howCreated\":1},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° ZW\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° ZW\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"058cdf80b0b9839cb0d8\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° Außen\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° Außen\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"2c91d88cc0605466b7ea\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WA\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WA\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"1466aa6aae1b4605094b\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WE\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Anzahl Über 27.5° WE\"}}}],\"display\":{\"mode\":\"hidden\"}}},\"011240d3c82eee6b4ad4\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Außentemp. Quote\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Außentemp. Quote\"}}}]}},\"312e27209cd4d2a2e14d\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"howCreated\":1},{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote ZW\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote ZW\"}}}]}},\"a0446e959d8a8ac36b6d\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WE\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WE\"}}}]}},\"fffc09e654237e938870\":{\"filters\":{\"byExpr\":[{\"type\":\"Advanced\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WA\"}},\"howCreated\":0}]},\"singleVisual\":{\"visualType\":\"card\",\"objects\":{},\"orderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"TEMPERATUR_DATEN\"}},\"Property\":\"Quote WA\"}}}]}}}}},\"objects\":{\"merge\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}},\"options\":{\"targetVisualNames\":[]}}],\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection8b5dab8643be231c04cb",
+      "config": "{}",
+      "name": "Pod"
+    },
+    {
+      "boundSection": "ReportSectionf292012512dc0c24edc4",
+      "config": "{}",
+      "name": "Pod1"
+    },
+    {
+      "boundSection": "ReportSectiond635bbeb3b51281a3c01",
+      "config": "{}",
+      "name": "Pod2"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU03",
+            "path": "BaseThemes/CY22SU03.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Bosch_Data_Visualization6664962143079669.json",
+            "path": "Bosch_Data_Visualization6664962143079669.json",
+            "type": 100
+          },
+          {
+            "name": "background_standard_extended9725685974442988.png",
+            "path": "background_standard_extended9725685974442988.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'background_standard_extended.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"background_standard_extended9725685974442988.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Temperatur",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection8b5dab8643be231c04cb",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"011240d3c82eee6b4ad4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":737.7770844770569,\"y\":548.5463626260326,\"z\":10000,\"width\":267.47720364741645,\"height\":162.43161094224925,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Außentemp. Quote\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Außentemp. Quote\"},\"Name\":\"TEMPERATUR_DATEN.Außentemp. Quote\",\"NativeReferenceName\":\"Außentemp. Quote\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Außentemp. Quote\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 267.47,
+          "x": 737.77,
+          "y": 548.54,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"03dbfdf5ae88750980c9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":972.6443768996961,\"y\":16.534954407294833,\"z\":3000,\"width\":299.5744680851064,\"height\":81.70212765957447,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Column1\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"},\"Name\":\"TEMPERATUR_DATEN.Column1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2023-06-05T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2023-06-05T00:00:00'\"}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 81.70,
+          "width": 299.57,
+          "x": 972.64,
+          "y": 16.53,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"058cdf80b0b9839cb0d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":740.1823708206688,\"y\":550.516717325228,\"z\":6000,\"width\":267.47720364741645,\"height\":162.43161094224925,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Anzahl Über 27.5° Außen\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° Außen\"},\"Name\":\"TEMPERATUR_DATEN.Anzahl Über 27.5° Außen\",\"NativeReferenceName\":\"Anzahl Über 27.5° Außen\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° Außen\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 267.47,
+          "x": 740.18,
+          "y": 550.51,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"1466aa6aae1b4605094b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":235.37993920972644,\"y\":550.516717325228,\"z\":8000,\"width\":227.5987841945289,\"height\":162.43161094224925,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Anzahl Über 28° HRL2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° WE\"},\"Name\":\"TEMPERATUR_DATEN.Anzahl Über 28° HRL2\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° WE\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 227.59,
+          "x": 235.37,
+          "y": 550.51,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"20dec2419b229005ed13\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":106.01823708206688,\"z\":0,\"width\":455.1975683890578,\"height\":437.6899696048632,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Column1\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka106)\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Zwischenbuehne Temp.)\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka102)\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Aussen-Temp. K107)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"},\"Name\":\"TEMPERATUR_DATEN.Column1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Ø-Temp. Halle Ka106\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka106)\",\"NativeReferenceName\":\"WA\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Zwischenbuehne Temp.\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Zwischenbuehne Temp.)\",\"NativeReferenceName\":\"ZW\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Ø-Temp. Halle Ka102\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka102)\",\"NativeReferenceName\":\"Ø-Temp. Halle Ka102\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Aussen-Temp. K107\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Aussen-Temp. K107)\",\"NativeReferenceName\":\"Aussen-Temp. K107\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Datum\"}}}]},\"columnProperties\":{\"Sum(TEMPERATUR_DATEN.Aussen-Temp. K107)\":{\"displayName\":\"Aussen\"},\"TEMPERATUR_DATEN.Column1\":{\"displayName\":\"Datum\"},\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka102)\":{\"displayName\":\"WE\"},\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka106)\":{\"displayName\":\"WA\"},\"Sum(TEMPERATUR_DATEN.Zwischenbuehne Temp.)\":{\"displayName\":\"ZW\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 437.68,
+          "width": 455.19,
+          "x": 7.78,
+          "y": 106.01,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"2c91d88cc0605466b7ea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":550.516717325228,\"z\":7000,\"width\":216.89969604863222,\"height\":162.43161094224925,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Anzahl Über 28°\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° WA\"},\"Name\":\"TEMPERATUR_DATEN.Anzahl Über 28°\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° WA\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 216.89,
+          "x": 7.78,
+          "y": 550.51,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"312e27209cd4d2a2e14d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":472.22222222222223,\"y\":548.8888888888889,\"z\":9000,\"width\":257.77777777777777,\"height\":162.22222222222223,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Quote ZW\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote ZW\"},\"Name\":\"TEMPERATUR_DATEN.Quote ZW\",\"NativeReferenceName\":\"Quote ZW\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote ZW\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 162.22,
+          "width": 257.77,
+          "x": 472.22,
+          "y": 548.88,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"3fe738f06d7c0e8566d9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1017.7777777777777,\"y\":556.6666666666666,\"z\":13000,\"width\":246.66666666666666,\"height\":145.55555555555554,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"bookmarkNavigator\",\"drillFilterOtherVisuals\":true,\"objects\":{\"bookmarks\":[{\"properties\":{\"selectedBookmark\":{\"expr\":{\"Literal\":{\"Value\":\"'Bookmarkb653f05072202be5a9ee'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 145.55,
+          "width": 246.66,
+          "x": 1017.77,
+          "y": 556.66,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"562640da1ec0182d8e40\",\"layouts\":[{\"id\":0,\"position\":{\"x\":472.7051671732523,\"y\":550.516717325228,\"z\":5000,\"width\":257.75075987841944,\"height\":162.43161094224925,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Anzahl Über 27.5° ZW\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° ZW\"},\"Name\":\"TEMPERATUR_DATEN.Anzahl Über 27.5° ZW\",\"NativeReferenceName\":\"Anzahl Über 27.5° ZW\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Anzahl Über 27.5° ZW\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 162.43,
+          "width": 257.75,
+          "x": 472.70,
+          "y": 550.51,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"81565210aa817a0d781c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":172.1580547112462,\"y\":16.534954407294833,\"z\":1000,\"width\":324.8632218844985,\"height\":71.97568389057751,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Temperaturen WHKa\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#008ecf\"}}]},{\"textRuns\":[{\"value\":\"V. 2.10.05.06.2023\",\"textStyle\":{\"fontSize\":\"11pt\",\"color\":\"#cccccc\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 71.97,
+          "width": 324.86,
+          "x": 172.15,
+          "y": 16.53,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a0446e959d8a8ac36b6d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":235.55555555555554,\"y\":548.8888888888889,\"z\":12000,\"width\":227.77777777777777,\"height\":162.22222222222223,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Quote HRL2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WE\"},\"Name\":\"TEMPERATUR_DATEN.Quote HRL2\",\"NativeReferenceName\":\"Quote HRL2\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WE\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.22,
+          "width": 227.77,
+          "x": 235.55,
+          "y": 548.88,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"acecd116de2e1a109884\",\"layouts\":[{\"id\":0,\"position\":{\"x\":472.7051671732523,\"y\":106.01823708206688,\"z\":2000,\"width\":807.2948328267478,\"height\":437.6899696048632,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka102)\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka106)\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Aussen-Temp. K107)\"},{\"queryRef\":\"Sum(TEMPERATUR_DATEN.Zwischenbuehne Temp.)\"}],\"Category\":[{\"queryRef\":\"TEMPERATUR_DATEN.Column1\",\"active\":true}],\"Y2\":[{\"queryRef\":\"TEMPERATUR_DATEN.Temperatur-Grenze\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t1\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Aussen-Temp. K107\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Aussen-Temp. K107)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Datum\"},\"Name\":\"TEMPERATUR_DATEN.Column1\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Temperatur-Grenze\"},\"Name\":\"TEMPERATUR_DATEN.Temperatur-Grenze\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Ø-Temp. Halle Ka102\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka102)\",\"NativeReferenceName\":\"Ø-Temp. Halle Ka102\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Ø-Temp. Halle Ka106\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Ø-Temp. Halle Ka106)\",\"NativeReferenceName\":\"Ø-Temp. Halle Ka106\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Zwischenbuehne Temp.\"}},\"Function\":0},\"Name\":\"Sum(TEMPERATUR_DATEN.Zwischenbuehne Temp.)\",\"NativeReferenceName\":\"Zwischenbuehne Temp.\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t1\"}},\"Property\":\"Datum\"}}}]},\"queryOptions\":{\"keepProjectionOrder\":true},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{\"responsive\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}},\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Temperatur in °C'\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}}}}},\"selector\":{\"metadata\":\"TEMPERATUR_DATEN.Temperatur-Grenze\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"Sum(TEMPERATUR_DATEN.Aussen-Temp. K107)\"}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Temperaturanzeige'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 437.68,
+          "width": 807.29,
+          "x": 472.70,
+          "y": 106.01,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"dd84132570887d17ad08\",\"layouts\":[{\"id\":0,\"position\":{\"x\":795.6231003039514,\"y\":16.534954407294833,\"z\":4000,\"width\":177.0212765957447,\"height\":79.75683890577508,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.SChicht\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Schicht\"},\"Name\":\"TEMPERATUR_DATEN.SChicht\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 79.75,
+          "width": 177.02,
+          "x": 795.62,
+          "y": 16.53,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"fffc09e654237e938870\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.777777777777778,\"y\":548.8888888888889,\"z\":11000,\"width\":216.66666666666666,\"height\":162.22222222222223,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Quote AKL/Vorzoen\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WA\"},\"Name\":\"TEMPERATUR_DATEN.Quote AKL/Vorzoen\",\"NativeReferenceName\":\"Quote AKL/Vorzoen\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WA\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.22,
+          "width": 216.66,
+          "x": 7.77,
+          "y": 548.88,
+          "z": 11000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'background_standard_extended.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"background_standard_extended9725685974442988.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "Temperatur_sql",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiond635bbeb3b51281a3c01",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"068f680f1a08800394fa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":472.22222222222223,\"y\":548.8888888888889,\"z\":9000,\"width\":257.77777777777777,\"height\":162.22222222222223,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Quote ZW\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote ZW\"},\"Name\":\"TEMPERATUR_DATEN.Quote ZW\",\"NativeReferenceName\":\"Quote ZW\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote ZW\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 162.22,
+          "width": 257.77,
+          "x": 472.22,
+          "y": 548.88,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"2063f359b67ba933044d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":973.0232558139535,\"y\":16.74418604651163,\"z\":3000,\"width\":299.5348837209302,\"height\":80,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_temperatur_sql.zeitstempel\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_temperatur_sql\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"},\"Name\":\"fact_temperatur_sql.zeitstempel\",\"NativeReferenceName\":\"zeitstempel\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2023-07-09T06:39:46.165'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_temperatur_sql\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2023-07-09T00:00:00'\"}}}}}]}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 80.00,
+          "width": 299.53,
+          "x": 973.02,
+          "y": 16.74,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"43bc812ab192895704e7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":106.01823708206688,\"z\":0,\"width\":455.1975683890578,\"height\":437.6899696048632,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_temperatur_sql.zeitstempel\"},{\"queryRef\":\"Sum(fact_temperatur_sql.halle_k106)\"},{\"queryRef\":\"Sum(fact_temperatur_sql.zwischenbuehne)\"},{\"queryRef\":\"Sum(fact_temperatur_sql.halle_ka102)\"},{\"queryRef\":\"Sum(fact_temperatur_sql.aussen_ka107)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_temperatur_sql\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"halle_ka102\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.halle_ka102)\",\"NativeReferenceName\":\"WE\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"aussen_ka107\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.aussen_ka107)\",\"NativeReferenceName\":\"Außen\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"halle_k106\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.halle_k106)\",\"NativeReferenceName\":\"WA\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"},\"Name\":\"fact_temperatur_sql.zeitstempel\",\"NativeReferenceName\":\"Datum\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zwischenbuehne\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.zwischenbuehne)\",\"NativeReferenceName\":\"ZWB\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"}}}]},\"columnProperties\":{\"Sum(fact_temperatur_sql.halle_k106)\":{\"displayName\":\"WA\"},\"Sum(fact_temperatur_sql.zwischenbuehne)\":{\"displayName\":\"ZWB\"},\"Sum(fact_temperatur_sql.halle_ka102)\":{\"displayName\":\"WE\"},\"Sum(fact_temperatur_sql.aussen_ka107)\":{\"displayName\":\"Außen\"},\"fact_temperatur_sql.zeitstempel\":{\"displayName\":\"Datum\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 437.68,
+          "width": 455.19,
+          "x": 7.78,
+          "y": 106.01,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"6c716a069ab9ef812bec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":172.1580547112462,\"y\":16.534954407294833,\"z\":1000,\"width\":324.8632218844985,\"height\":71.97568389057751,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Temperaturen WHKa\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\",\"color\":\"#008ecf\"}}]},{\"textRuns\":[{\"value\":\"V20230718\",\"textStyle\":{\"color\":\"#e6e6e6\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 71.97,
+          "width": 324.86,
+          "x": 172.15,
+          "y": 16.53,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"791b7fe4e2e436deb577\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.777777777777778,\"y\":548.8888888888889,\"z\":11000,\"width\":216.66666666666666,\"height\":162.22222222222223,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Quote AKL/Vorzoen\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WA\"},\"Name\":\"TEMPERATUR_DATEN.Quote AKL/Vorzoen\",\"NativeReferenceName\":\"Quote AKL/Vorzoen\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WA\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.22,
+          "width": 216.66,
+          "x": 7.77,
+          "y": 548.88,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"79dc35b0fb0acbc840f2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":235.55555555555554,\"y\":548.8888888888889,\"z\":12000,\"width\":227.77777777777777,\"height\":162.22222222222223,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Quote HRL2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WE\"},\"Name\":\"TEMPERATUR_DATEN.Quote HRL2\",\"NativeReferenceName\":\"Quote HRL2\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Quote WE\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.22,
+          "width": 227.77,
+          "x": 235.55,
+          "y": 548.88,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"adf6b0529b29c52b9009\",\"layouts\":[{\"id\":0,\"position\":{\"x\":737.7770844770569,\"y\":548.5463626260326,\"z\":10000,\"width\":267.47720364741645,\"height\":162.43161094224925,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"TEMPERATUR_DATEN.Außentemp. Quote\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"TEMPERATUR_DATEN\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Außentemp. Quote\"},\"Name\":\"TEMPERATUR_DATEN.Außentemp. Quote\",\"NativeReferenceName\":\"Außentemp. Quote\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Außentemp. Quote\"}}}]},\"display\":{\"mode\":\"hidden\"},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 267.47,
+          "x": 737.77,
+          "y": 548.54,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"f5ea0b2f09bb9c82d98e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":471.6279069767442,\"y\":106.04651162790698,\"z\":13001,\"width\":792.5581395348837,\"height\":437.2093023255814,\"tabOrder\":13001}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fact_temperatur_sql.zeitstempel\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fact_temperatur_sql.halle_k106)\"},{\"queryRef\":\"Sum(fact_temperatur_sql.zwischenbuehne)\"},{\"queryRef\":\"Sum(fact_temperatur_sql.halle_ka102)\"},{\"queryRef\":\"Sum(fact_temperatur_sql.aussen_ka107)\"}],\"Y2\":[{\"queryRef\":\"fact_temperatur_sql.Grenze\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_temperatur_sql\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"},\"Name\":\"fact_temperatur_sql.zeitstempel\",\"NativeReferenceName\":\"Datum\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"halle_k106\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.halle_k106)\",\"NativeReferenceName\":\"WA\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zwischenbuehne\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.zwischenbuehne)\",\"NativeReferenceName\":\"ZWB\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"halle_ka102\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.halle_ka102)\",\"NativeReferenceName\":\"WE\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"aussen_ka107\"}},\"Function\":0},\"Name\":\"Sum(fact_temperatur_sql.aussen_ka107)\",\"NativeReferenceName\":\"Außen\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Grenze\"},\"Name\":\"fact_temperatur_sql.Grenze\",\"NativeReferenceName\":\"Grenze\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"zeitstempel\"}}}]},\"columnProperties\":{\"Sum(fact_temperatur_sql.halle_k106)\":{\"displayName\":\"WA\"},\"Sum(fact_temperatur_sql.zwischenbuehne)\":{\"displayName\":\"ZWB\"},\"Sum(fact_temperatur_sql.halle_ka102)\":{\"displayName\":\"WE\"},\"Sum(fact_temperatur_sql.aussen_ka107)\":{\"displayName\":\"Außen\"},\"fact_temperatur_sql.zeitstempel\":{\"displayName\":\"Datum\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#ED0007'\"}}}}}},\"selector\":{\"metadata\":\"fact_temperatur_sql.Grenze\"}}],\"lineStyles\":[{\"properties\":{\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'dashed'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 437.20,
+          "width": 792.55,
+          "x": 471.62,
+          "y": 106.04,
+          "z": 13001.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'background_standard_extended.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"background_standard_extended9725685974442988.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Temperaturen bis November",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter365664af2ce158b807e7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"ZeitGerundet\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"ZeitGerundet\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"datetime'1899-12-30T01:00:00'\"}}],[{\"Literal\":{\"Value\":\"datetime'1899-12-30T10:30:00'\"}}],[{\"Literal\":{\"Value\":\"datetime'1899-12-30T18:00:00'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSectionf292012512dc0c24edc4",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1098b7fa92e56a57b78f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":472.7051671732523,\"y\":550.516717325228,\"z\":5000,\"width\":257.75075987841944,\"height\":162.43161094224925}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Über 28 Grad Quote AKL-Vorzone\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"},\"Name\":\"Chart1_data (2).Über 28 Grad Quote AKL-Vorzone\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"expression\":{\"Arithmetic\":{\"Left\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Right\":{\"ScopedEval\":{\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Chart1_data (2)\"}},\"Property\":\"Über 28 Grad Quote HRL_2\"}},\"Scope\":[]}},\"Operator\":3}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false}]",
+          "height": 162.43,
+          "width": 257.75,
+          "x": 472.70,
+          "y": 550.51,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"4db106347b709465ee85\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":106.01823708206688,\"z\":0,\"width\":455.1975683890578,\"height\":437.6899696048632}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Zeit\"},{\"queryRef\":\"Sum(Chart1_data (2).[◄] K106LL04.TR71 (Original) [°C])\"},{\"queryRef\":\"Sum(Chart1_data (2).[◄] K106LL04.TR75 (Original) [°C])\"},{\"queryRef\":\"Sum(Chart1_data (2).[◄] K107LS01.TR01 (Original) [°C])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"[◄] K106LL04.TR71 (Original) [°C]\"}},\"Function\":0},\"Name\":\"Sum(Chart1_data (2).[◄] K106LL04.TR71 (Original) [°C])\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"[◄] K106LL04.TR75 (Original) [°C]\"}},\"Function\":0},\"Name\":\"Sum(Chart1_data (2).[◄] K106LL04.TR75 (Original) [°C])\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"[◄] K107LS01.TR01 (Original) [°C]\"}},\"Function\":0},\"Name\":\"Sum(Chart1_data (2).[◄] K107LS01.TR01 (Original) [°C])\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"},\"Name\":\"Chart1_data (2).Zeit\"}]},\"columnProperties\":{\"Sum(Chart1_data (2).[◄] K106LL04.TR71 (Original) [°C])\":{\"displayName\":\"Temp. HRL2\"},\"Sum(Chart1_data (2).[◄] K106LL04.TR75 (Original) [°C])\":{\"displayName\":\"Temp. Vorzone/AKL\"},\"Sum(Chart1_data (2).[◄] K107LS01.TR01 (Original) [°C])\":{\"displayName\":\"Außentemp.\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"total\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 437.68,
+          "width": 455.19,
+          "x": 7.78,
+          "y": 106.01,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"67991210468d87d63bfc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":740.1823708206688,\"y\":550.516717325228,\"z\":6000,\"width\":267.47720364741645,\"height\":162.43161094224925}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Über 28 Grad Quote HRL 2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Über 28 Grad Quote AKL&Vorzone\"},\"Name\":\"Chart1_data (2).Über 28 Grad Quote HRL 2\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Über 28 Grad Quote AKL&Vorzone\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 267.47,
+          "x": 740.18,
+          "y": 550.51,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"71fafcc62371886b0627\",\"layouts\":[{\"id\":0,\"position\":{\"x\":172.1580547112462,\"y\":16.534954407294833,\"z\":1000,\"width\":324.8632218844985,\"height\":71.97568389057751}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Temperaturen 1h vor den Pausen\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]},{\"textRuns\":[{\"value\":\"V. 1.10\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"14pt\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 71.97,
+          "width": 324.86,
+          "x": 172.15,
+          "y": 16.53,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"94853e9b2df4a11d6536\",\"layouts\":[{\"id\":0,\"position\":{\"x\":235.37993920972644,\"y\":550.516717325228,\"z\":9000,\"width\":227.5987841945289,\"height\":162.43161094224925}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Anzahl Über 28 AKL/Vorzone\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Anzahl Über 28 AKL/Vorzone\"},\"Name\":\"Chart1_data (2).Anzahl Über 28 AKL/Vorzone\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Anzahl Über 28 AKL/Vorzone\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 227.59,
+          "x": 235.37,
+          "y": 550.51,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"97e23c43a96de44533b5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":472.7051671732523,\"y\":106.01823708206688,\"z\":2000,\"width\":807.2948328267478,\"height\":437.6899696048632}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Chart1_data (2).[◄] K106LL04.TR71 (Original) [°C])\"},{\"queryRef\":\"Sum(Chart1_data (2).[◄] K106LL04.TR75 (Original) [°C])\"},{\"queryRef\":\"Sum(Chart1_data (2).[◄] K107LS01.TR01 (Original) [°C])\"}],\"Category\":[{\"queryRef\":\"Chart1_data (2).Zeit\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"[◄] K106LL04.TR71 (Original) [°C]\"}},\"Function\":0},\"Name\":\"Sum(Chart1_data (2).[◄] K106LL04.TR71 (Original) [°C])\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"[◄] K106LL04.TR75 (Original) [°C]\"}},\"Function\":0},\"Name\":\"Sum(Chart1_data (2).[◄] K106LL04.TR75 (Original) [°C])\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"[◄] K107LS01.TR01 (Original) [°C]\"}},\"Function\":0},\"Name\":\"Sum(Chart1_data (2).[◄] K107LS01.TR01 (Original) [°C])\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"},\"Name\":\"Chart1_data (2).Zeit\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"}}}]},\"columnProperties\":{\"Sum(Chart1_data (2).[◄] K106LL04.TR71 (Original) [°C])\":{\"displayName\":\"Temp. HRL2\"},\"Sum(Chart1_data (2).[◄] K106LL04.TR75 (Original) [°C])\":{\"displayName\":\"Temp. Vorzone/AKL\"},\"Sum(Chart1_data (2).[◄] K107LS01.TR01 (Original) [°C])\":{\"displayName\":\"Außentemp.\"}},\"queryOptions\":{\"keepProjectionOrder\":true},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{\"responsive\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}},\"innerPadding\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Temperatur in °C'\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"secShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Temperaturanzeige'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 437.68,
+          "width": 807.29,
+          "x": 472.70,
+          "y": 106.01,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"bb8ed8eae29ed9d03368\",\"layouts\":[{\"id\":0,\"position\":{\"x\":972.6443768996961,\"y\":16.534954407294833,\"z\":3000,\"width\":299.5744680851064,\"height\":81.70212765957447}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Zeit\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"},\"Name\":\"Chart1_data (2).Zeit\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"startDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2022-06-12T03:24:20.950'\"}}},\"endDate\":{\"expr\":{\"Literal\":{\"Value\":\"datetime'2022-06-14T00:00:00'\"}}},\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Comparison\":{\"ComparisonKind\":2,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2022-06-12T00:00:00'\"}}}},\"Right\":{\"Comparison\":{\"ComparisonKind\":3,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Zeit\"}},\"Right\":{\"Literal\":{\"Value\":\"datetime'2022-06-15T00:00:00'\"}}}}}}}]}}}}]}}}",
+          "filters": "[]",
+          "height": 81.70,
+          "width": 299.57,
+          "x": 972.64,
+          "y": 16.53,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d944530d5ad7877c7b1e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":795.6231003039514,\"y\":16.534954407294833,\"z\":4000,\"width\":177.0212765957447,\"height\":79.75683890577508}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Schicht\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Schicht\"},\"Name\":\"Chart1_data (2).Schicht\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 79.75,
+          "width": 177.02,
+          "x": 795.62,
+          "y": 16.53,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f100be5d467baae2aac4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1016.4133738601824,\"y\":550.516717325228,\"z\":7000,\"width\":255.80547112462008,\"height\":162.43161094224925}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Über 28 Grad Quote Außentemp\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Über 28 Grad Quote Außentemp\"},\"Name\":\"Chart1_data (2).Über 28 Grad Quote Außentemp\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Über 28 Grad Quote Außentemp\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 255.80,
+          "x": 1016.41,
+          "y": 550.51,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"fbffa0f778e68decb0bc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.781155015197569,\"y\":550.516717325228,\"z\":8000,\"width\":216.89969604863222,\"height\":162.43161094224925}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Chart1_data (2).Anzahl Über 28 HRL2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Chart1_data (2)\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Anzahl Über 28 HRL2\"},\"Name\":\"Chart1_data (2).Anzahl Über 28 HRL2\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Anzahl Über 28 HRL2\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 162.43,
+          "width": 216.89,
+          "x": 7.78,
+          "y": 550.51,
+          "z": 8000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Bosch_Data_Visualization6664962143079669.json"
+}
