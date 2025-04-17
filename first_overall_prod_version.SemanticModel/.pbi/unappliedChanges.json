@@ -1,0 +1,93 @@
+{
+  "version": "1.0",
+  "conceptualSchemaSettings": {},
+  "queries": [
+    {
+      "name": "fact_workingminutes_shyftplan",
+      "lineageTag": "d096cabb-9048-4fa1-b800-51eb4d184501",
+      "queryGroupId": "81af4a3f-ae42-487f-b2e5-02fb93ca0676",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Sql.Database(\"MA-LO-AnalysisBackend.bosch.com\", \"AALOW_Internal\", [Query=\"#(lf)-- First, select working minutes of each group#(lf)WITH worker_fact AS (#(lf) #(lf)#(tab)#(tab)SELECT *, #(lf)#(tab)#(tab)CONVERT(DATE,[Start_of_hour_Datetime]) AS [DatumSchicht],#(lf)#(tab)#(tab)CASE WHEN LEFT(Groups,4) = 'LOW3' THEN 'HRL und Versand' ELSE 'AKL' END AS WERTSTROM#(lf) #(lf)#(tab)#(tab)#(tab)FROM [AALOW_Internal].[LOWKA].[shyftplan_workingminutes_all_hourly]#(lf)#(tab)#(tab)#(tab)WHERE YEAR([Start_of_hour_Datetime]) >= 2022#(lf)#(tab)#(tab)#(tab)#(lf)#(tab)#(tab)#(tab)#(lf)#(tab)#(tab)#(tab))#(lf)-- Aggregate by sum the worker minutes --> transform into hours#(lf)SELECT [DatumSchicht] AS \"\"Datum\"\", Wertstrom, SUM(MA_minutes) / 60 AS \"\"MA_Stunden\"\"#(lf)FROM worker_fact#(lf)GROUP BY [DatumSchicht], Wertstrom#(lf)#(lf)\", CommandTimeout=#duration(0, 1, 0, 0)]),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Datum\", type date}}),",
+        "    #\"Sorted Rows\" = Table.Sort(#\"Changed Type\",{{\"Datum\", Order.Descending}})",
+        "in",
+        "    #\"Sorted Rows\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "fact_deliverypositions_lisa",
+      "lineageTag": "7fde9735-330c-4509-a9a5-ff1447a41a5c",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Sql.Database(\"MA-LO-AnalysisBackend.bosch.com\", \"AALOW_Internal\", [Query=\"WITH CTE_events AS (#(lf)SELECT CONCAT([LIEFERUNGID], [LIEFERUNGPOSID]) AS Pos_ID#(lf)      ,CONVERT(DATE, [ARCHIVIERT]) AS Datum#(lf)  FROM [AALOW_Internal].[LISA].[V_ACC_LIFPOA]#(lf)  WHERE [STORNO] IS NULL#(lf)  )#(lf)#(lf)SELECT Datum, Count(Pos_ID) AS [Anzahl Positionen]#(lf)FROM CTE_events#(lf)GROUP BY Datum\", CommandTimeout=#duration(0, 1, 0, 0)])",
+        "in",
+        "    Source"
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Sql.Database(\\\"si0vsql230\\\", \\\"AALOW_Internal\\\", [Query=\\\"WITH CTE_events AS (#(lf)SELECT CONCAT([LIEFERUNGID], [LIEFERUNGPOSID]) AS Pos_ID#(lf)      ,CONVERT(DATE, [ARCHIVIERT]) AS Datum#(lf)  FROM [AALOW_Internal].[LISA].[V_ACC_LIFPOA]#(lf)  WHERE [STORNO] IS NULL#(lf)  )#(lf)#(lf)SELECT Datum, Count(Pos_ID) AS [Anzahl Positionen]#(lf)FROM CTE_events#(lf)GROUP BY Datum\\\", CommandTimeout=#duration(0, 1, 0, 0)])\\nin\\n    Source\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Table",
+      "isHidden": false
+    },
+    {
+      "name": "fact_workingminutes_inbound_sharepoint",
+      "lineageTag": "7daf7425-5a8d-47ca-a67e-7ded6d64c6e8",
+      "queryGroupId": "81af4a3f-ae42-487f-b2e5-02fb93ca0676",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = SharePoint.Files(\"https://bosch.sharepoint.com/sites/msteams_172d65-WE_Kennzahlen\", [ApiVersion = 15]),",
+        "    #\"WE-Gesamt_Kennzahlen xlsx_https://bosch sharepoint com/sites/msteams_172d65-WE_Kennzahlen/Shared Documents/WE_Kennzahlen/\" = Source{[Name=\"WE-Gesamt_Kennzahlen.xlsx\",#\"Folder Path\"=\"https://bosch.sharepoint.com/sites/msteams_172d65-WE_Kennzahlen/Shared Documents/WE_Kennzahlen/\"]}[Content],",
+        "    #\"Imported Excel Workbook\" = Excel.Workbook(#\"WE-Gesamt_Kennzahlen xlsx_https://bosch sharepoint com/sites/msteams_172d65-WE_Kennzahlen/Shared Documents/WE_Kennzahlen/\"),",
+        "    Kennzahlen_Sheet = #\"Imported Excel Workbook\"{[Item=\"Kennzahlen\",Kind=\"Sheet\"]}[Data],",
+        "    #\"Removed Top Rows\" = Table.Skip(Kennzahlen_Sheet,1),",
+        "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Removed Top Rows\", [PromoteAllScalars=true]),",
+        "    #\"Renamed Columns\" = Table.RenameColumns(#\"Promoted Headers\",{{\"Ältestes Datum\", \"Ältestes Datum.1\"}, {\"Column1\", \"Datum\"}}),",
+        "    #\"Removed Other Columns\" = Table.SelectColumns(#\"Renamed Columns\",{\"Datum\", \"Gesamt\"}),",
+        "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Removed Other Columns\",{{\"Gesamt\", \"MA_Stunden\"}}),",
+        "    #\"Replaced Errors\" = Table.ReplaceErrorValues(#\"Renamed Columns1\", {{\"MA_Stunden\", 244}}),",
+        "    #\"Added Custom\" = Table.AddColumn(#\"Replaced Errors\", \"Wertstrom\", each \"Wareneingang\")",
+        "in",
+        "    #\"Added Custom\""
+      ],
+      "loadAsTableDisabled": true,
+      "resultType": "Exception",
+      "isHidden": false
+    },
+    {
+      "name": "fact_workingminuntes_all",
+      "lineageTag": "bde8958b-fa88-4223-9a23-df9f38f2f224",
+      "queryGroupId": "81af4a3f-ae42-487f-b2e5-02fb93ca0676",
+      "navigationStepName": "Navigation",
+      "text": [
+        "let",
+        "    Source = Table.Combine({fact_workingminutes_shyftplan, fact_workingminutes_inbound_sharepoint}),",
+        "    #\"Grouped Rows\" = Table.Group(Source, {\"Datum\", \"Wertstrom\"}, {{\"MA_Stunden\", each List.Sum([MA_Stunden]), type nullable number}}),",
+        "    #\"Replaced Errors\" = Table.ReplaceErrorValues(#\"Grouped Rows\", {{\"MA_Stunden\", 0}}),",
+        "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Errors\", each ([MA_Stunden] <> 0)),",
+        "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Filtered Rows\",{{\"Datum\", type date}})",
+        "in",
+        "    #\"Changed Type\""
+      ],
+      "isDirectQuery": false,
+      "lastLoadedAsTableFormulaText": "{\"IncludesReferencedQueries\":false,\"RootFormulaText\":\"let\\n    Source = Table.Combine({fact_workingminutes_shyftplan, fact_workingminutes_inbound_sharepoint}),\\n    #\\\"Grouped Rows\\\" = Table.Group(Source, {\\\"Datum\\\", \\\"Wertstrom\\\"}, {{\\\"MA_Stunden\\\", each List.Sum([MA_Stunden]), type nullable number}}),\\n    #\\\"Replaced Errors\\\" = Table.ReplaceErrorValues(#\\\"Grouped Rows\\\", {{\\\"MA_Stunden\\\", 0}}),\\n    #\\\"Filtered Rows\\\" = Table.SelectRows(#\\\"Replaced Errors\\\", each ([MA_Stunden] <> 0)),\\n    #\\\"Changed Type\\\" = Table.TransformColumnTypes(#\\\"Filtered Rows\\\",{{\\\"Datum\\\", type date}})\\nin\\n    #\\\"Changed Type\\\"\",\"ReferencedQueriesFormulaText\":{}}",
+      "loadAsTableDisabled": false,
+      "resultType": "Exception",
+      "isHidden": false
+    }
+  ],
+  "queryGroups": [
+    {
+      "name": "working minutes",
+      "id": "81af4a3f-ae42-487f-b2e5-02fb93ca0676",
+      "description": "diferent data sources"
+    }
+  ],
+  "culture": "de-DE"
+}

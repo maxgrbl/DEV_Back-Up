@@ -12,11 +12,11 @@ queryGroup 'working minutes'
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["fact_workingminutes_shyftplan","fact_deliverypositions_lisa","fact_workingminutes_inbound_sharepoint","fact_workingminuntes_all","fact_workingminutes_dispatch"]
+annotation PBI_QueryOrder = ["fact_workingminutes_shyftplan","fact_deliverypositions_lisa","fact_workingminutes_inbound_sharepoint","fact_workingminuntes_all"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.136.1202.0 (24.09)
+annotation PBIDesktopVersion = 2.140.1205.0 (25.02)+2ab3defe107764e1cf486b42122d9362df7f34ea
 
 ref table DateTableTemplate_e0bd8716-dd4a-496d-9fd9-63ee71aad108
 ref table dimCalendar

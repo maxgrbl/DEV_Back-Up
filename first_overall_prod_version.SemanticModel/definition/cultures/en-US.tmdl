@@ -2,8 +2,1173 @@ cultureInfo en-US
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "3.5.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_calendar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dimCalendar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "calendar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.date.variation.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.date.variation.date_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.date.variation.date_hierarchy.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.date.variation.date_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.date.variation.date_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.productivity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dimCalendar",
+			          "ConceptualProperty": "Productivity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "productivity": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "efficiency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "production": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "throughput": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "output": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fact_deliverypositions_lisa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_deliverypositions_lisa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact deliverypositions lisa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact deliveryposition lisa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "fact_deliverypositions_lisa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_deliverypositions_lisa.datum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_deliverypositions_lisa",
+			          "ConceptualProperty": "Datum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_deliverypositions_lisa.anzahl_positionen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_deliverypositions_lisa",
+			          "ConceptualProperty": "Anzahl Positionen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "anzahl positionen": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_workingminuntes_all"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact workingminunte all": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact_workingminuntes_all": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all.datum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_workingminuntes_all",
+			          "ConceptualProperty": "Datum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "Day": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_workingminunte_all.MA_stunden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_workingminuntes_all",
+			          "ConceptualProperty": "MA_Stunden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "MA stunden": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MA_Stunden": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all.wertstrom": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_workingminuntes_all",
+			          "ConceptualProperty": "Wertstrom"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wertstrom": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.date": {
+			          "Target": {
+			            "Entity": "dim_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_dates"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_productivity": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.productivity": {
+			          "Target": {
+			            "Entity": "dim_calendar.productivity"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.productivity"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_productivity"
+			        }
+			      ]
+			    },
+			    "fact_deliverypositions_lisa_has_datum": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_deliverypositions_lisa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_deliverypositions_lisa": {
+			          "Target": {
+			            "Entity": "fact_deliverypositions_lisa"
+			          }
+			        },
+			        "fact_deliverypositions_lisa.datum": {
+			          "Target": {
+			            "Entity": "fact_deliverypositions_lisa.datum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_deliverypositions_lisa"
+			            },
+			            "Object": {
+			              "Role": "fact_deliverypositions_lisa.datum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_deliverypositions_lisa_have_data"
+			        }
+			      ]
+			    },
+			    "fact_deliverypositions_lisa_has_anzahl_positionen": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_deliverypositions_lisa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_deliverypositions_lisa": {
+			          "Target": {
+			            "Entity": "fact_deliverypositions_lisa"
+			          }
+			        },
+			        "fact_deliverypositions_lisa.anzahl_positionen": {
+			          "Target": {
+			            "Entity": "fact_deliverypositions_lisa.anzahl_positionen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_deliverypositions_lisa"
+			            },
+			            "Object": {
+			              "Role": "fact_deliverypositions_lisa.anzahl_positionen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_deliverypositions_lisa_have_anzahl_positionens"
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all_has_datum": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_workingminuntes_all"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_workingminunte_all": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all"
+			          }
+			        },
+			        "fact_workingminunte_all.datum": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all.datum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_workingminunte_all"
+			            },
+			            "Object": {
+			              "Role": "fact_workingminunte_all.datum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_workingminunte_all_have_data"
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all_has_MA_stunden": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_workingminuntes_all"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_workingminunte_all": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all"
+			          }
+			        },
+			        "fact_workingminunte_all.MA_stunden": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all.MA_stunden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_workingminunte_all"
+			            },
+			            "Object": {
+			              "Role": "fact_workingminunte_all.MA_stunden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_workingminunte_all_have_MA_stundens"
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all_has_wertstrom": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_workingminuntes_all"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_workingminunte_all": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all"
+			          }
+			        },
+			        "fact_workingminunte_all.wertstrom": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all.wertstrom"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_workingminunte_all"
+			            },
+			            "Object": {
+			              "Role": "fact_workingminunte_all.wertstrom"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_workingminunte_all_have_wertstroms"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_fact_deliverypositions_lisa": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "fact_deliverypositions_lisa": {
+			          "Target": {
+			            "Entity": "fact_deliverypositions_lisa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "fact_deliverypositions_lisa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_fact_deliverypositions_lisa"
+			        }
+			      ]
+			    },
+			    "fact_deliverypositions_lisa_has_dim_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_deliverypositions_lisa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_deliverypositions_lisa": {
+			          "Target": {
+			            "Entity": "fact_deliverypositions_lisa"
+			          }
+			        },
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_deliverypositions_lisa"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_deliverypositions_lisa_have_dim_calendars"
+			        }
+			      ]
+			    },
+			    "fact_workingminunte_all_has_dim_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_workingminuntes_all"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_workingminunte_all": {
+			          "Target": {
+			            "Entity": "fact_workingminunte_all"
+			          }
+			        },
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_workingminunte_all"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_workingminunte_all_have_dim_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "fact_workingminunte_all"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_fact_workingminunte_all"
+			        }
+			      ]
+			    },
+			    "dim_calendar_date_has_variation_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar.date": {
+			          "Target": {
+			            "Entity": "dim_calendar.date"
+			          }
+			        },
+			        "dim_calendar.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar.date"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dim_calendar_date_variation_date_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_calendar.date.variation.date_hierarchy.year": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "dim_calendar_date_variation_date_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_calendar.date.variation.date_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
+			    "dim_calendar_date_variation_date_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_calendar.date.variation.date_hierarchy.month": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "dim_calendar_date_variation_date_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar.date.variation.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy"
+			          }
+			        },
+			        "dim_calendar.date.variation.date_hierarchy.day": {
+			          "Target": {
+			            "Entity": "dim_calendar.date.variation.date_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date.variation.date_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    }
+			  }
 			}
 		contentType: json
 

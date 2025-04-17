@@ -35,11 +35,13 @@ table fact_workingminuntes_all
 		queryGroup: 'working minutes'
 		source =
 				let
-				    Source = Table.Combine({fact_workingminutes_shyftplan, fact_workingminutes_inbound_sharepoint,fact_workingminutes_dispatch}),
+				    Source = Table.Combine({fact_workingminutes_shyftplan, fact_workingminutes_inbound_sharepoint}),
 				    #"Grouped Rows" = Table.Group(Source, {"Datum", "Wertstrom"}, {{"MA_Stunden", each List.Sum([MA_Stunden]), type nullable number}}),
-				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Grouped Rows", {{"MA_Stunden", 0}})
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Grouped Rows", {{"MA_Stunden", 0}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Replaced Errors", each ([MA_Stunden] <> 0)),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Filtered Rows",{{"Datum", type date}})
 				in
-				    #"Replaced Errors"
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
 
